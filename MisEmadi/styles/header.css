@@ -1,0 +1,107 @@
+header {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.616);
+}
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d6336c;
+}
+header .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+header .menu ul li a {
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #e71660;
+  font-size: large;
+}
+header .menu ul li a:hover {
+  color: #d6336c;
+  transform: translateY(-2px);
+}
+header .search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .searchbox {
+  position: relative;
+}
+header .searchbox input {
+  padding: 8px 15px 8px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 1px 1px 10px rgba(226, 92, 204, 0.514);
+  border: 1px solid #e454b9;
+  outline: none;
+  width: 200px;
+  transition: all 0.3s ease;
+  margin-left: 50px;
+}
+header .searchbox .labelforsearch {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e454b9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+header .searchbox .labelforsearch:hover {
+  color: #d6336c;
+}
+header .btn {
+  display: flex;
+  gap: 15px;
+}
+header .btn a {
+  color: #df3584;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #f3a6dc;
+}
+header .btn a:hover {
+  color: #d6336c;
+  transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  header .logo {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  header .menu ul {
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  header .menu ul li a {
+    font-size: medium;
+  }
+  header .search {
+    display: none;
+  }
+}
