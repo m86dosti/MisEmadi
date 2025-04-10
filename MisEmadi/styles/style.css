@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Homa, sans-serif;
+}
+@font-face {
+  font-family: Homa;
+  src: url(../Font/Homa.ttf);
+}
+body {
+  background-color: pink;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+main {
+  padding: 50px;
+}
+section {
+  margin: 20px;
+}
+.SpecialProduct {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.SpecialProduct .product {
+  padding: 300px;
+  background-color: #dbcfcf;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* برای هر قسمتش باید به ترتیب شماره ادرس عکس رو بدی */
+/* مثلا 1 و 2 مال اون دوتا محصول اولی ینی جوجه نمدی و خرس پشمالوعه  */
+/* یا مثلا 3 و 4 مال اون دوتا محصول دومی ینی گارفیلد و جوجه بغله*/
+/* همنی طوری به ترتیب تا اخر */
+.SpecialProduct .product:nth-child(1) {
+  background-image: url(../Media/Picture/Picture1.png); /*ادرس عکس رو باید اینجا بزاری*/
+}
+.SpecialProduct .product:nth-child(2) {
+  background-image: url(../Media/Picture/Picture2.png); 
+}
+.SpecialProduct .product:nth-child(3) {
+  background-image: url(../Media/Picture/Picture1.png);
+}
+.SpecialProduct .product:nth-child(4) {
+  background-image: url(../Media/Picture/Picture2.png); 
+}
+.SpecialProduct .product:nth-child(5) {
+  background-image: url(../Media/Picture/Picture1.png); 
+}
+.SpecialProduct .product:nth-child(6) {
+  background-image: url(../Media/Picture/Picture2.png);
+}
+
+
+.SpecialProduct .product a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(128, 128, 128, 0.178);
+  color: white;
+  padding: 5px 8px;
+  margin: 1px 5px;
+  border-radius: 5px;
+  min-width: 100px;
+  max-width: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+}
+.SpecialProduct .product a i {
+  background-color: #a3a3a3;
+  padding: 5px;
+  border-radius: 50%;
+}
+/*-------------------------------------*/
+.allProducts {
+  margin: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.allProducts::after {
+  content: "مشاهده ی همه";
+  color: red;
+  cursor: pointer;
+}
+.allProducts::before {
+  content: "جدید ترین عروسک ها";
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.products .product {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(63, 63, 63);
+}
+.products .product img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.products .product .productInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+/*---------------------------*/
+.allProductsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.allProductsBtn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  background-color: red;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 8px;
+}
+.allProductsBtn a i {
+  background-color: rgba(128, 128, 128, 0.404);
+  border-radius: 50%;
+  padding: 10px;
+}
+/*---------------------------*/
+.productsList {
+  justify-content: space-evenly;
+  display: flex;
+  gap: 10px;
+}
+.productsList .product .productImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.productsList .product:nth-of-type(1) .productImg {
+  background-color: rgb(116, 81, 155);
+}
+.productsList .product:nth-of-type(2) .productImg {
+  background-color: rgb(52, 230, 111);
+}
+.productsList .product:nth-of-type(3) .productImg {
+  background-color: rgb(236, 113, 220);
+}
+.productsList .product:nth-of-type(4) .productImg {
+  background-color: rgb(55, 119, 238);
+}
+.productsList .product:nth-of-type(5) .productImg {
+  background-color: rgb(0, 255, 64);
+}
+.productsList .product:nth-of-type(6) .productImg {
+  background-color: rgb(218, 201, 54);
+}
+
+.productsList .product .productImg img {
+  width: 50%;
+}
+.productsList .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productsList .product .productName {
+  transform: translateY(-20px);
+  background-color: white;
+  padding: 10px 50px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.486);
+}

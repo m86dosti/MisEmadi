@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرم تماس</title>
+    <style>
+      * {
+        font-family: Homa;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+      }
+      @font-face {
+        font-family: Homa;
+        src: url(Font/Homa.ttf);
+      }
+      .container {
+        background-color: rgb(167, 185, 243);
+        box-shadow: 1px 1px 10px rgb(36, 49, 105);
+        padding: 10px 30px;
+        border-radius: 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .formHeader p {
+        font-size: larger;
+      }
+      .formGroup .formItem {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+      }
+      .formGroup .formItem input {
+        width: 250px;
+        background-color: rgb(167, 185, 243);
+        border-radius: 5px;
+        border: 1px solid rgb(121, 163, 226);
+        padding: 4px 10px;
+        box-shadow: 1px 1px 10px rgb(126, 141, 207);
+      }
+      #messeage {
+        height: 100px;
+      }
+      .formbtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .formbtn input {
+        box-shadow: 1px 1px 10px rgba(44, 53, 94, 0.651);
+        background-color: rgb(87, 160, 230);
+        border: none;
+        padding: 1px 80px;
+        border-radius: 5px;
+      }
+      .formbtn input:hover {
+        background-color: rgb(116, 162, 231);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="formHeader">
+        <p>با ما در ارتباط باشید</p>
+      </div>
+      <form>
+        <div class="formGroup">
+          <div class="formItem">
+            <label>نام و نام خانوادگی :</label>
+            <input type="text" />
+          </div>
+          <div class="formItem">
+            <label>ایمیل :</label>
+            <input type="email" />
+          </div>
+          <div class="formItem">
+            <label>پیام :</label>
+            <input type="text" id="messeage" />
+          </div>
+        </div>
+        <div class="formbtn">
+          <input type="submit" value="ارسال" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
